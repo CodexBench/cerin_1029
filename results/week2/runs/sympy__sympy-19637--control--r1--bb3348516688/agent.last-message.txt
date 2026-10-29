@@ -1,0 +1,7 @@
+Fixed `kernS` so `kern` is only referenced when a placeholder was generated. Added a regression test for `"(2*x)/(x-1)"`.
+
+Validation:
+
+- Syntax checks passed.
+- `git diff --check` passed.
+- Focused test could not run because `mpmath` is not installed in the environment.

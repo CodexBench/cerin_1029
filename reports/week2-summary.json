@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-10-29T09:11:57.195+00:00",
+  "experiment_id": "week2-pilot-3x2",
+  "expected_runs": 6,
+  "stored_runs": 6,
+  "complete_matrix": true,
+  "billing_mode": "chatgpt_subscription",
+  "cost_note": "Monetary cost is N/A because ChatGPT subscription usage is not equivalent to API token pricing.",
+  "overall": {
+    "runs": 6,
+    "completed": 6,
+    "resolved": 4,
+    "resolved_rate": 0.6667,
+    "average_duration_seconds": 129.875,
+    "average_budget_tokens": 32051.833,
+    "average_estimated_cost_usd": null,
+    "outcomes": {
+      "normal_failure": 2,
+      "normal_success": 4
+    }
+  },
+  "by_condition": {
+    "combined": {
+      "runs": 3,
+      "completed": 3,
+      "resolved": 2,
+      "resolved_rate": 0.6667,
+      "average_duration_seconds": 135.301,
+      "average_budget_tokens": 36299.333,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_failure": 1,
+        "normal_success": 2
+      }
+    },
+    "control": {
+      "runs": 3,
+      "completed": 3,
+      "resolved": 2,
+      "resolved_rate": 0.6667,
+      "average_duration_seconds": 124.45,
+      "average_budget_tokens": 27804.333,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_failure": 1,
+        "normal_success": 2
+      }
+    }
+  },
+  "runs": [
+    {
+      "run_id": "sympy__sympy-19637--combined--r1--476928f4ae59",
+      "task_id": "sympy__sympy-19637",
+      "condition_id": "combined",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 94.608,
+      "budget_tokens": 26017,
+      "run_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-19637--combined--r1--476928f4ae59"
+    },
+    {
+      "run_id": "sympy__sympy-19637--control--r1--bb3348516688",
+      "task_id": "sympy__sympy-19637",
+      "condition_id": "control",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 92.402,
+      "budget_tokens": 18250,
+      "run_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-19637--control--r1--bb3348516688"
+    },
+    {
+      "run_id": "sympy__sympy-20590--combined--r1--b75f4ebe9cd8",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "combined",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 140.605,
+      "budget_tokens": 46845,
+      "run_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--combined--r1--b75f4ebe9cd8"
+    },
+    {
+      "run_id": "sympy__sympy-20590--control--r1--b8bf9b75e3b9",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "control",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 156.569,
+      "budget_tokens": 41135,
+      "run_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--control--r1--b8bf9b75e3b9"
+    },
+    {
+      "run_id": "sympy__sympy-20916--combined--r1--78f16fd0c507",
+      "task_id": "sympy__sympy-20916",
+      "condition_id": "combined",
+      "status": "completed",
+      "outcome_kind": "normal_failure",
+      "resolved": false,
+      "duration_seconds": 170.689,
+      "budget_tokens": 36036,
+      "run_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507"
+    },
+    {
+      "run_id": "sympy__sympy-20916--control--r1--a814c7848632",
+      "task_id": "sympy__sympy-20916",
+      "condition_id": "control",
+      "status": "completed",
+      "outcome_kind": "normal_failure",
+      "resolved": false,
+      "duration_seconds": 124.38,
+      "budget_tokens": 24028,
+      "run_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--control--r1--a814c7848632"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+schema_version: 1
+experiment_id: week2-pilot-3x2
+prompt_version: week2-v1
+repetitions: 1
+seed: 1029
+
+runtime:
+  model: gpt-5.6-sol
+  reasoning_effort: high
+  token_budget: 50000
+  agent_timeout_seconds: 1800
+  evaluator_timeout_seconds: 1800
+  codex_cli: codex
+  swebench_cli: .venv/bin/swebench
+  task_repo: swe-bench-tasks
+  results_dir: runs
+  database: runs/results.sqlite3
+  billing_mode: chatgpt_subscription
+
+tasks:
+  - id: sympy__sympy-20590
+    dataset: verified
+    repo: sympy/sympy
+    base_commit: cffd4e0f86fefd4802349a9f9b19ed70934ea354
+    image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest
+    image_platform: linux/amd64
+  - id: sympy__sympy-19637
+    dataset: verified
+    repo: sympy/sympy
+    base_commit: 63f8f465d48559fecb4e4bf3c48b75bf15a3e0ef
+    image: swebench/sweb.eval.x86_64.sympy_1776_sympy-19637:latest
+    image_platform: linux/amd64
+  - id: sympy__sympy-20916
+    dataset: verified
+    repo: sympy/sympy
+    base_commit: 82298df6a51491bfaad0c6d1980e7e3ca808ae93
+    image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20916:latest
+    image_platform: linux/amd64
+
+conditions:
+  - id: control
+    label: 추가 저장소 지침 없음
+    documents: []
+  - id: combined
+    label: 저장소 안내와 테스트 안내
+    documents:
+      - source: ../instructions/combined/AGENTS.md
+        destination: AGENTS.md
+

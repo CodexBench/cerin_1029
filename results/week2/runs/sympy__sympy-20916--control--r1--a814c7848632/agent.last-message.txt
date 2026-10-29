@@ -1,0 +1,6 @@
+Fixed Unicode Greek-letter subscripts.
+
+- Updated `split_super_sub` to recognize Unicode letters, so `ω0` becomes `ω₀`.
+- Added a regression test for `upretty(Symbol('ω0'))`.
+- Syntax checks and focused parser cases pass; full tests couldn’t run because `mpmath` is unavailable.
+- Working tree contains only the two intended changes.

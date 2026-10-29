@@ -1,0 +1,93 @@
+{
+  "run_id": "sympy__sympy-20916--combined--r1--78f16fd0c507",
+  "experiment_id": "week2-pilot-3x2",
+  "task_id": "sympy__sympy-20916",
+  "condition_id": "combined",
+  "repetition": 1,
+  "status": "completed",
+  "outcome_kind": "normal_failure",
+  "resolved": false,
+  "duration_seconds": 170.689,
+  "agent": {
+    "argv": [
+      "/Applications/ChatGPT.app/Contents/Resources/codex",
+      "exec",
+      "--cd",
+      "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/workspace",
+      "--sandbox",
+      "workspace-write",
+      "--ephemeral",
+      "--ignore-user-config",
+      "--ignore-rules",
+      "--json",
+      "--model",
+      "gpt-5.6-sol",
+      "--config",
+      "model_reasoning_effort=\"high\"",
+      "--output-last-message",
+      "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/agent.last-message.txt",
+      "You are solving one SWE-bench issue in a clean checkout at its base commit.\nUse only the problem statement, repository, and condition-specific documentation in this workspace.\nDo not access the internet, reference patches, SWE-bench task repositories, evaluator outputs, or\npaths outside this repository. Diagnose the root cause, make the smallest correct change, run focused\ntests when possible, and leave only the intended solution in the working tree. Do not commit.\nThe experiment token budget is 50000 effective tokens.\n\nExperiment condition: combined\n\nProblem statement:\n\npprint unicode does not format subscripts on Greek letters\nGood:\n\n[ -t₀⋅w₀   -t₁⋅w₀   -t₂⋅w₀]\n\n\nBad:\n\n[ -t₀⋅ω0   -t₁⋅ω0   -t₂⋅ω0]\n\n\n\n\n"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 143.78489395789802,
+    "stdout_path": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/agent.events.jsonl",
+    "stderr_path": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/agent.stderr.log",
+    "error": null
+  },
+  "token_usage": {
+    "input_tokens": 486632,
+    "cached_input_tokens": 457856,
+    "uncached_input_tokens": 28776,
+    "output_tokens": 7260,
+    "reasoning_output_tokens": 3680,
+    "raw_total_tokens": 493892,
+    "budget_tokens": 36036
+  },
+  "token_budget": 50000,
+  "evaluation": {
+    "valid": true,
+    "resolved": false,
+    "run_id": "cb2-sympy__sympy-20916--combined--r1--78f16fd0c507",
+    "mismatches": {},
+    "results": {
+      "total_instances": 1,
+      "submitted_instances": 1,
+      "completed_instances": 1,
+      "resolved_instances": 0,
+      "unresolved_instances": 1,
+      "infra_failure_instances": 0,
+      "ambiguous_failure_instances": 0,
+      "empty_patch_instances": 0,
+      "error_instances": 0,
+      "completed_ids": [
+        "sympy__sympy-20916"
+      ],
+      "incomplete_ids": [],
+      "empty_patch_ids": [],
+      "submitted_ids": [
+        "sympy__sympy-20916"
+      ],
+      "resolved_ids": [],
+      "unresolved_ids": [
+        "sympy__sympy-20916"
+      ],
+      "infra_failure_ids": [],
+      "ambiguous_failure_ids": [],
+      "failure_reasons": {},
+      "error_ids": [],
+      "schema_version": 2,
+      "unstopped_instances": 0,
+      "unstopped_containers": [],
+      "unremoved_images": [
+        "swebench/sweb.eval.x86_64.sympy_1776_sympy-20916:latest"
+      ]
+    },
+    "artifact": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/evaluation"
+  },
+  "billing_mode": "chatgpt_subscription",
+  "estimated_cost_usd": null,
+  "cost_note": "ChatGPT subscription run; API token pricing is not an equivalent billing basis",
+  "error": null,
+  "completed_at": "2026-10-29T09:05:49.994+00:00"
+}

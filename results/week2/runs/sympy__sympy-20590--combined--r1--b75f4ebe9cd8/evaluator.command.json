@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/Users/cerin/Desktop/4-1/SWE-bench/.venv/bin/swebench",
+    "eval",
+    "verified",
+    "--instance",
+    "sympy__sympy-20590",
+    "--run-id",
+    "cb2-sympy__sympy-20590--combined--r1--b75f4ebe9cd8",
+    "--workers",
+    "1",
+    "--timeout",
+    "1800",
+    "--predictions",
+    "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--combined--r1--b75f4ebe9cd8/predictions.jsonl"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 25.315217042108998,
+  "stdout_path": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--combined--r1--b75f4ebe9cd8/evaluator.stdout.log",
+  "stderr_path": "/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--combined--r1--b75f4ebe9cd8/evaluator.stderr.log",
+  "error": null
+}

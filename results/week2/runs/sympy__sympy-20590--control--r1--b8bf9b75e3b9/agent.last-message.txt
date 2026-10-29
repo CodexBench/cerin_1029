@@ -1,0 +1,6 @@
+Fixed the `Symbol.__dict__` regression.
+
+- Added `__slots__ = ()` to [`Printable`](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--control--r1--b8bf9b75e3b9/workspace/sympy/core/_print_helpers.py:20), preventing it from adding dictionaries to `Basic` instances.
+- Added a regression assertion for `Symbol`.
+
+Validation passed compilation, diff checks, and a `Symbol`-shaped inheritance test. The full focused test was blocked because `mpmath` is unavailable in the environment.

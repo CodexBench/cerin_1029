@@ -1,0 +1,10 @@
+Implemented the Unicode Greek subscript fix.
+
+- Updated [conventions.py](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/workspace/sympy/printing/conventions.py:10) to recognize Unicode letters before trailing digits.
+- Added `ω0 → ω₀` regression coverage in [test_pretty.py](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20916--combined--r1--78f16fd0c507/workspace/sympy/printing/pretty/tests/test_pretty.py:277).
+
+Validation:
+
+- Direct formatter checks passed for `ω0`, `α12`, `w0`, and `omega0`.
+- Compilation and `git diff --check` passed.
+- The repository test runner was blocked because `mpmath` is unavailable in the environment.

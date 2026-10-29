@@ -1,0 +1,10 @@
+Fixed `kernS`’s uninitialized `kern` access.
+
+- `hit` is now updated only when a placeholder `kern` is actually created in [sympify.py](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-19637--combined--r1--476928f4ae59/workspace/sympy/core/sympify.py:510).
+- Added the reported `(2*x)/(x-1)` regression case in [test_sympify.py](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-19637--combined--r1--476928f4ae59/workspace/sympy/core/tests/test_sympify.py:513).
+
+Validation:
+
+- Python compilation passed.
+- `git diff --check` passed.
+- Focused test execution was blocked because the environment lacks the required `mpmath` dependency. No dependencies were fetched or installed.

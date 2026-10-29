@@ -1,0 +1,37 @@
+{
+  "status": "ready",
+  "timestamp": "2026-10-29T08:58:28.575+00:00",
+  "errors": [],
+  "warnings": [
+    "Docker memory is below 12 GiB; prebuilt images are required"
+  ],
+  "paths": {
+    "project_root": "/Users/cerin/Desktop/4-1/cerin_1029",
+    "manifest": "/Users/cerin/Desktop/4-1/cerin_1029/experiments/week2.yaml",
+    "codex_cli": "/Applications/ChatGPT.app/Contents/Resources/codex",
+    "swebench_cli": "/Users/cerin/Desktop/4-1/SWE-bench/.venv/bin/swebench",
+    "task_repo": "/Users/cerin/Desktop/4-1/SWE-bench/swe-bench-tasks",
+    "results_dir": "/Users/cerin/Desktop/4-1/cerin_1029/runs",
+    "database": "/Users/cerin/Desktop/4-1/cerin_1029/runs/results.sqlite3"
+  },
+  "images": [
+    {
+      "task_id": "sympy__sympy-20590",
+      "image": "swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest",
+      "id": "sha256:3a282752833ce34730ee0621e22033501c993f45742775ca57f04c9ff27178a0",
+      "architecture": "amd64"
+    },
+    {
+      "task_id": "sympy__sympy-19637",
+      "image": "swebench/sweb.eval.x86_64.sympy_1776_sympy-19637:latest",
+      "id": "sha256:956f0b8b048011ead5ff6d46007527a4cb4e1007e4f74fd1c935df6420730d8f",
+      "architecture": "amd64"
+    },
+    {
+      "task_id": "sympy__sympy-20916",
+      "image": "swebench/sweb.eval.x86_64.sympy_1776_sympy-20916:latest",
+      "id": "sha256:cd63c5ad1e2dab2e4f222cdd069ab620b69b3607d6a56c23922bd7de441dc1bc",
+      "architecture": "amd64"
+    }
+  ]
+}

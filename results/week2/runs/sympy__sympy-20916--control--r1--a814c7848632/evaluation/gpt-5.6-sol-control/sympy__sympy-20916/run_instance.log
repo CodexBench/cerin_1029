@@ -1,0 +1,72 @@
+2026-10-29 18:11:27,649 - INFO - Creating container for sympy__sympy-20916...
+2026-10-29 18:11:27,687 - INFO - Container for sympy__sympy-20916 created: 23a4b40627f00c65cad16af5540f234349e4cb01fc97f779e8c8dc43b33a6b14
+2026-10-29 18:11:27,778 - INFO - Container for sympy__sympy-20916 started: 23a4b40627f00c65cad16af5540f234349e4cb01fc97f779e8c8dc43b33a6b14
+2026-10-29 18:11:27,779 - INFO - Intermediate patch for sympy__sympy-20916 written to logs/evaluation/cb2-sympy__sympy-20916--control--r1--a814c7848632/gpt-5.6-sol-control/sympy__sympy-20916/patch.diff, now applying to container...
+2026-10-29 18:11:27,917 - INFO - >>>>> Applied Patch:
+Checking patch sympy/printing/conventions.py...
+Checking patch sympy/printing/pretty/tests/test_pretty.py...
+Applied patch sympy/printing/conventions.py cleanly.
+Applied patch sympy/printing/pretty/tests/test_pretty.py cleanly.
+
+2026-10-29 18:11:28,226 - INFO - Git diff before:
+diff --git a/sympy/printing/conventions.py b/sympy/printing/conventions.py
+index 9a3be6bbe9..5e3aa1ab54 100644
+--- a/sympy/printing/conventions.py
++++ b/sympy/printing/conventions.py
+@@ -7,7 +7,7 @@
+ from collections.abc import Iterable
+ from sympy import Derivative
+ 
+-_name_with_digits_p = re.compile(r'^([a-zA-Z]+)([0-9]+)$')
++_name_with_digits_p = re.compile(r'^([^\W\d_]+)([0-9]+)$')
+ 
+ 
+ def split_super_sub(text):
+diff --git a/sympy/printing/pretty/tests/test_pretty.py b/sympy/printing/pretty/tests/test_pretty.py
+index 42fae775d3..f70d04d4ad 100644
+--- a/sympy/printing/pretty/tests/test_pretty.py
++++ b/sympy/printing/pretty/tests/test_pretty.py
+@@ -270,6 +270,7 @@ def test_upretty_greek():
+     assert upretty( Symbol('alpha^+_1') ) == 'α⁺₁'
+     assert upretty( Symbol('beta') ) == 'β'
+     assert upretty(Symbol('lambda')) == 'λ'
++    assert upretty(Symbol('ω0')) == 'ω₀'
+ 
+ 
+ def test_upretty_multiindex():
+2026-10-29 18:11:28,227 - INFO - Eval script for sympy__sympy-20916 written to logs/evaluation/cb2-sympy__sympy-20916--control--r1--a814c7848632/gpt-5.6-sol-control/sympy__sympy-20916/eval.sh; copying to container...
+2026-10-29 18:11:31,914 - INFO - Test runtime: 3.63 seconds
+2026-10-29 18:11:31,915 - INFO - Test output for sympy__sympy-20916 written to logs/evaluation/cb2-sympy__sympy-20916--control--r1--a814c7848632/gpt-5.6-sol-control/sympy__sympy-20916/test_output.txt
+2026-10-29 18:11:31,996 - INFO - Git diff after:
+diff --git a/sympy/printing/conventions.py b/sympy/printing/conventions.py
+index 9a3be6bbe9..5e3aa1ab54 100644
+--- a/sympy/printing/conventions.py
++++ b/sympy/printing/conventions.py
+@@ -7,7 +7,7 @@
+ from collections.abc import Iterable
+ from sympy import Derivative
+ 
+-_name_with_digits_p = re.compile(r'^([a-zA-Z]+)([0-9]+)$')
++_name_with_digits_p = re.compile(r'^([^\W\d_]+)([0-9]+)$')
+ 
+ 
+ def split_super_sub(text):
+diff --git a/sympy/printing/pretty/tests/test_pretty.py b/sympy/printing/pretty/tests/test_pretty.py
+index 42fae775d3..f70d04d4ad 100644
+--- a/sympy/printing/pretty/tests/test_pretty.py
++++ b/sympy/printing/pretty/tests/test_pretty.py
+@@ -270,6 +270,7 @@ def test_upretty_greek():
+     assert upretty( Symbol('alpha^+_1') ) == 'α⁺₁'
+     assert upretty( Symbol('beta') ) == 'β'
+     assert upretty(Symbol('lambda')) == 'λ'
++    assert upretty(Symbol('ω0')) == 'ω₀'
+ 
+ 
+ def test_upretty_multiindex():
+2026-10-29 18:11:31,996 - INFO - Grading answer for sympy__sympy-20916...
+2026-10-29 18:11:31,997 - INFO - report: {'sympy__sympy-20916': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'infra_failure': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['test_super_sub']}, 'PASS_TO_PASS': {'success': ['test_requires_partial'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sympy__sympy-20916: resolved: False
+2026-10-29 18:11:31,999 - INFO - Attempting to stop container sweb.eval.sympy__sympy-20916.cb2-sympy__sympy-20916--control--r1--a814c7848632...
+2026-10-29 18:11:47,235 - INFO - Container sweb.eval.sympy__sympy-20916.cb2-sympy__sympy-20916--control--r1--a814c7848632 stopped successfully.
+2026-10-29 18:11:47,235 - INFO - Attempting to remove container sweb.eval.sympy__sympy-20916.cb2-sympy__sympy-20916--control--r1--a814c7848632...
+2026-10-29 18:11:47,271 - INFO - Container sweb.eval.sympy__sympy-20916.cb2-sympy__sympy-20916--control--r1--a814c7848632 removed successfully.

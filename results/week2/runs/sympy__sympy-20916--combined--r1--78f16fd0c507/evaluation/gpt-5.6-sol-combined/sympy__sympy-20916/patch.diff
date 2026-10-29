@@ -1,0 +1,25 @@
+diff --git a/sympy/printing/conventions.py b/sympy/printing/conventions.py
+index 9a3be6bbe9..5e3aa1ab54 100644
+--- a/sympy/printing/conventions.py
++++ b/sympy/printing/conventions.py
+@@ -7,7 +7,7 @@
+ from collections.abc import Iterable
+ from sympy import Derivative
+ 
+-_name_with_digits_p = re.compile(r'^([a-zA-Z]+)([0-9]+)$')
++_name_with_digits_p = re.compile(r'^([^\W\d_]+)([0-9]+)$')
+ 
+ 
+ def split_super_sub(text):
+diff --git a/sympy/printing/pretty/tests/test_pretty.py b/sympy/printing/pretty/tests/test_pretty.py
+index 42fae775d3..64409a947c 100644
+--- a/sympy/printing/pretty/tests/test_pretty.py
++++ b/sympy/printing/pretty/tests/test_pretty.py
+@@ -274,6 +274,7 @@ def test_upretty_greek():
+ 
+ def test_upretty_multiindex():
+     assert upretty( Symbol('beta12') ) == 'β₁₂'
++    assert upretty( Symbol('ω0') ) == 'ω₀'
+     assert upretty( Symbol('Y00') ) == 'Y₀₀'
+     assert upretty( Symbol('Y_00') ) == 'Y₀₀'
+     assert upretty( Symbol('F^+-') ) == 'F⁺⁻'

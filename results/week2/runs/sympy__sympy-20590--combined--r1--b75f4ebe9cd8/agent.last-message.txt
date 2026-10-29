@@ -1,0 +1,11 @@
+Fixed the `Symbol.__dict__` regression.
+
+- Added `__slots__ = ()` to [`Printable`](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--combined--r1--b75f4ebe9cd8/workspace/sympy/core/_print_helpers.py:20), preventing it from introducing an instance dictionary into `Basic` subclasses.
+- Added a focused regression assertion in [`test_symbol.py`](/Users/cerin/Desktop/4-1/cerin_1029/runs/sympy__sympy-20590--combined--r1--b75f4ebe9cd8/workspace/sympy/core/tests/test_symbol.py:17).
+
+Validation:
+
+- Syntax compilation passed.
+- Isolated slot-inheritance check passed.
+- `git diff --check` passed.
+- Full focused test execution was blocked because `mpmath` is not installed in the environment.
